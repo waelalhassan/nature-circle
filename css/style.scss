@@ -1,0 +1,472 @@
+@import "./media.css";
+
+
+// $mainColor: #262c49;
+$mainColor: #8c8c8c;
+// #6E36CA
+
+$rgbColor: linear-gradient(
+  to right top,
+  #484a4e,
+  #595a5d,
+  #6a6a6c,
+  #7b7b7c,
+  #8c8c8c
+);
+
+$rgbREColor: linear-gradient(
+  to right top,
+  #8c8c8c,
+  #7b7b7c,
+  #6a6a6c,
+  #595a5d,
+  #484a4e
+);
+$rgbaColor: rgba(140, 140, 140, 0.7);
+
+@mixin transition($second, $ea) {
+  -moz-transition: all $second $ea;
+  -o-transition: all $second $ea;
+  -webkit-transition: all $second $ea;
+  transition: all $second $ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/*-- start header --*/
+#nav {
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+  background-color: #fafafa;
+  nav {
+    padding-top: 20px !important;
+    .logo {
+      a {
+        color: black;
+        font-size: 25px;
+        span {
+          color: $mainColor;
+        }
+      }
+    }
+    height: 70px;
+    ul {
+      li {
+        a {
+          color: $mainColor;
+          &:hover {
+            color: $rgbaColor;
+          }
+        }
+        &:after {
+          content: "";
+          display: block;
+          margin: 0 auto;
+          width: 2px;
+          opacity: 0;
+          height: 1.5px;
+          background-color: black;
+          @include transition(0.3s, ease);
+        }
+        &:hover:after {
+          width: 70%;
+          opacity: 1;
+        }
+      }
+    }
+    .Sign-up {
+      background-color: $mainColor;
+      color: #fff;
+      margin-left: 20px;
+      padding: 7px 35px;
+      border-radius: 20px;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+      @include transition(0.3, ease-in);
+      &:hover {
+        color: #fff;
+        background-color: $rgbaColor;
+        border: 2px solid $mainColor;
+        box-shadow: none;
+      }
+    }
+  }
+  @include transition(0.5s, ease);
+}
+.nav-scroll {
+  position: fixed !important;
+  padding: 0 0 10px;
+  display: block;
+  background-color: $mainColor !important;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  a,
+  span {
+    color: #fff !important;
+  }
+  button {
+    background-color: #fff !important;
+    color: $mainColor !important;
+  }
+}
+
+header {
+  position: relative;
+  padding-top: 100px;
+  overflow: hidden;
+  width: 100%;
+  height: 700px;
+  margin-bottom: 50px;
+  .C-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      color: $mainColor;
+      line-height: 1.3;
+      font-size: 2.5em;
+    }
+    p {
+      margin: 20px 0 30px;
+    }
+    button {
+      width: 175px;
+      height: 40px;
+      background-color: $rgbaColor;
+      box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      color: #fff;
+      @include transition(0.3s, ease);
+      &:hover {
+        background-color: $mainColor;
+        box-shadow: none;
+        color: #fff;
+      }
+    }
+  }
+  .C-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+      width: 300px;
+      height: auto;
+    }
+  }
+}
+header:before {
+  content: "";
+  position: absolute;
+  top: -170px;
+  left: -20px;
+  right: 0;
+  width: 120%;
+  height: 100%;
+  background-color: #fafafa;
+  transform: rotate(-10deg);
+  border-bottom-left-radius: 25%;
+  z-index: -1;
+}
+
+/*-- end header --*/
+
+/*-- start sectionOne --*/
+#sectionOne {
+  margin: 0 0 100px;
+  .C-1 {
+    img {
+      width: 350px;
+      height: auto;
+    }
+  }
+  .C-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      line-height: 1.5;
+    }
+    article {
+      margin-top: 30px;
+      p {
+        margin: 20px 0 30px;
+      }
+    }
+    button {
+      width: 175px;
+      height: 40px;
+      border-radius: 20px;
+      color: #fff;
+      background: $rgbColor;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+      &:hover {
+        background: $rgbREColor;
+        box-shadow: none;
+      }
+    }
+  }
+}
+/*-- end sectionOne --*/
+
+/*-- start sectionTow --*/
+#sectionTow {
+  background-color: #fafafa;
+  padding: 100px 0;
+  .C-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    div {
+      span {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid $mainColor;
+        background-color: $mainColor;
+        opacity: 0.7;
+        i {
+          display: block;
+          text-align: center;
+          font-size: 50px;
+          line-height: 100px;
+          color: #fafafa;
+        }
+      }
+      h3 {
+        font-weight: bolder;
+        font-size: 1.5em;
+        margin: 20px 0;
+      }
+    }
+  }
+  .C-2 {
+    img {
+      width: 450px;
+      height: auto;
+    }
+  }
+}
+/*-- end sectionTow --*/
+
+/*-- start sectionThree --*/
+#sectionThree {
+  margin: 100px 0;
+  .C-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    #accordion {
+      .card {
+        .card-header {
+          background-color: #fff !important;
+          a {
+            color: $mainColor;
+          }
+        }
+        .card-body {
+          background-color: $mainColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+/*-- end sectionThree --*/
+
+/*-- start sectionFour --*/
+#sectionFour {
+  background-color: #fafafa;
+  padding: 100px 0;
+  .C-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    form {
+      input,
+      textarea {
+        display: block;
+        margin: 0 0 20px;
+        padding: 10px;
+        width: 80%;
+        height: 35px;
+        border-radius: 15px;
+        font-size: 15px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        border: none;
+        outline: none;
+      }
+      ::placeholder {
+        opacity: 0.5;
+      }
+      button {
+        margin: 30px 0 0;
+        width: 175px;
+        height: 40px;
+        border-radius: 20px;
+        color: #fff;
+        background: $rgbColor;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+        @include transition(0.3s, ease);
+        &:hover {
+          background: $rgbREColor;
+          box-shadow: none;
+        }
+      }
+      textarea {
+        height: 150px;
+        resize: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+  .C-2 {
+    img {
+      width: 450px;
+      height: auto;
+    }
+  }
+}
+/*-- end sectionFour --*/
+
+/*-- start sectionFive --*/
+
+#sectionFive {
+  margin: 100px 0;
+  .person {
+    opacity: 0.5;
+    margin: 30px 20px;
+    width: 500px;
+    padding: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    img {
+      width: 100px;
+      height: auto;
+      border-radius: 50%;
+      display: bloack;
+      margin: 15px auto;
+    }
+    p {
+      text-align: center;
+      width: 100%;
+      margin: 20px auto;
+    }
+    h4 {
+      text-align: center;
+    }
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+  .slick-slide {
+    outline: none !important;
+    background-color: #fafafa;
+  }
+  .slick-slide:hover {
+    cursor: pointer;
+  }
+  .slick-slide.slick-center {
+    transform: scale(1.1);
+    opacity: 1;
+    background-color: #fff;
+  }
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  color: $mainColor;
+  font-size: 50px;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+.slick-prev {
+  left: -50px !important;
+}
+
+/*-- end sectionFive --*/
+
+/*-- start sectionSix --*/
+#sectionSix {
+  padding: 100px 0;
+  background-color: #fafafa;
+  form {
+    position: relative;
+    input {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 25px;
+      width: 450px;
+      height: 45px;
+      border-radius: 25px;
+      font-size: 20px;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      border: none;
+      outline: none;
+    }
+    button {
+      position: absolute;
+      background-color: $mainColor;
+      color: #fff;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      top: 2px;
+      right: 335px;
+      i {
+        line-height: 15px;
+        text-align: center;
+      }
+      &:hover {
+        background: $rgbaColor;
+      }
+    }
+  }
+}
+/*-- end sectionSix --*/
+
+/*-- start sectionSeven --*/
+#sectionSeven {
+  margin: 100px 0;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    &:nth-of-type(1) {
+      li {
+        margin: 0 15px;
+        a {
+          text-decoration: none;
+          color: $mainColor;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      li {
+        margin: 10px 20px;
+        a i {
+          font-size: 25px;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+/*-- end sectionSeven --*/
+
+/*-- start footer --*/
+footer {
+  padding: 50px 0;
+  background-color: #fafafa;
+}
+/*-- end footer --*/

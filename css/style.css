@@ -1,0 +1,436 @@
+@import url(./media.css);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/*-- start header --*/
+#nav {
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+  background-color: #fafafa;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#nav nav {
+  padding-top: 20px !important;
+  height: 70px;
+}
+#nav nav .logo a {
+  color: black;
+  font-size: 25px;
+}
+#nav nav .logo a span {
+  color: #8c8c8c;
+}
+#nav nav ul li a {
+  color: #8c8c8c;
+}
+#nav nav ul li a:hover {
+  color: rgba(140, 140, 140, 0.7);
+}
+#nav nav ul li:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 2px;
+  opacity: 0;
+  height: 1.5px;
+  background-color: black;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#nav nav ul li:hover:after {
+  width: 70%;
+  opacity: 1;
+}
+#nav nav .Sign-up {
+  background-color: #8c8c8c;
+  color: #fff;
+  margin-left: 20px;
+  padding: 7px 35px;
+  border-radius: 20px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+  -moz-transition: all 0.3 ease-in;
+  -o-transition: all 0.3 ease-in;
+  -webkit-transition: all 0.3 ease-in;
+  transition: all 0.3 ease-in;
+}
+#nav nav .Sign-up:hover {
+  color: #fff;
+  background-color: rgba(140, 140, 140, 0.7);
+  border: 2px solid #8c8c8c;
+  box-shadow: none;
+}
+
+.nav-scroll {
+  position: fixed !important;
+  padding: 0 0 10px;
+  display: block;
+  background-color: #8c8c8c !important;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.nav-scroll a,
+.nav-scroll span {
+  color: #fff !important;
+}
+.nav-scroll button {
+  background-color: #fff !important;
+  color: #8c8c8c !important;
+}
+
+header {
+  position: relative;
+  padding-top: 100px;
+  overflow: hidden;
+  width: 100%;
+  height: 700px;
+  margin-bottom: 50px;
+}
+header .C-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .C-1 h2 {
+  color: #8c8c8c;
+  line-height: 1.3;
+  font-size: 2.5em;
+}
+header .C-1 p {
+  margin: 20px 0 30px;
+}
+header .C-1 button {
+  width: 175px;
+  height: 40px;
+  background-color: rgba(140, 140, 140, 0.7);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  color: #fff;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+header .C-1 button:hover {
+  background-color: #8c8c8c;
+  box-shadow: none;
+  color: #fff;
+}
+header .C-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+header .C-2 img {
+  width: 300px;
+  height: auto;
+}
+
+header:before {
+  content: "";
+  position: absolute;
+  top: -170px;
+  left: -20px;
+  right: 0;
+  width: 120%;
+  height: 100%;
+  background-color: #fafafa;
+  transform: rotate(-10deg);
+  border-bottom-left-radius: 25%;
+  z-index: -1;
+}
+
+/*-- end header --*/
+/*-- start sectionOne --*/
+#sectionOne {
+  margin: 0 0 100px;
+}
+#sectionOne .C-1 img {
+  width: 350px;
+  height: auto;
+}
+#sectionOne .C-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#sectionOne .C-2 h2 {
+  line-height: 1.5;
+}
+#sectionOne .C-2 article {
+  margin-top: 30px;
+}
+#sectionOne .C-2 article p {
+  margin: 20px 0 30px;
+}
+#sectionOne .C-2 button {
+  width: 175px;
+  height: 40px;
+  border-radius: 20px;
+  color: #fff;
+  background: linear-gradient(to right top, #484a4e, #595a5d, #6a6a6c, #7b7b7c, #8c8c8c);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+#sectionOne .C-2 button:hover {
+  background: linear-gradient(to right top, #8c8c8c, #7b7b7c, #6a6a6c, #595a5d, #484a4e);
+  box-shadow: none;
+}
+
+/*-- end sectionOne --*/
+/*-- start sectionTow --*/
+#sectionTow {
+  background-color: #fafafa;
+  padding: 100px 0;
+}
+#sectionTow .C-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#sectionTow .C-1 div span {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #8c8c8c;
+  background-color: #8c8c8c;
+  opacity: 0.7;
+}
+#sectionTow .C-1 div span i {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  line-height: 100px;
+  color: #fafafa;
+}
+#sectionTow .C-1 div h3 {
+  font-weight: bolder;
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+#sectionTow .C-2 img {
+  width: 450px;
+  height: auto;
+}
+
+/*-- end sectionTow --*/
+/*-- start sectionThree --*/
+#sectionThree {
+  margin: 100px 0;
+}
+#sectionThree .C-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#sectionThree .C-2 #accordion .card .card-header {
+  background-color: #fff !important;
+}
+#sectionThree .C-2 #accordion .card .card-header a {
+  color: #8c8c8c;
+}
+#sectionThree .C-2 #accordion .card .card-body {
+  background-color: #8c8c8c;
+  color: #fff;
+}
+
+/*-- end sectionThree --*/
+/*-- start sectionFour --*/
+#sectionFour {
+  background-color: #fafafa;
+  padding: 100px 0;
+}
+#sectionFour .C-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#sectionFour .C-1 form input,
+#sectionFour .C-1 form textarea {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px;
+  width: 80%;
+  height: 35px;
+  border-radius: 15px;
+  font-size: 15px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
+}
+#sectionFour .C-1 form ::placeholder {
+  opacity: 0.5;
+}
+#sectionFour .C-1 form button {
+  margin: 30px 0 0;
+  width: 175px;
+  height: 40px;
+  border-radius: 20px;
+  color: #fff;
+  background: linear-gradient(to right top, #484a4e, #595a5d, #6a6a6c, #7b7b7c, #8c8c8c);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#sectionFour .C-1 form button:hover {
+  background: linear-gradient(to right top, #8c8c8c, #7b7b7c, #6a6a6c, #595a5d, #484a4e);
+  box-shadow: none;
+}
+#sectionFour .C-1 form textarea {
+  height: 150px;
+  resize: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#sectionFour .C-2 img {
+  width: 450px;
+  height: auto;
+}
+
+/*-- end sectionFour --*/
+/*-- start sectionFive --*/
+#sectionFive {
+  margin: 100px 0;
+}
+#sectionFive .person {
+  opacity: 0.5;
+  margin: 30px 20px;
+  width: 500px;
+  padding: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+#sectionFive .person img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  display: bloack;
+  margin: 15px auto;
+}
+#sectionFive .person p {
+  text-align: center;
+  width: 100%;
+  margin: 20px auto;
+}
+#sectionFive .person h4 {
+  text-align: center;
+}
+#sectionFive .person span {
+  display: block;
+  text-align: center;
+}
+#sectionFive .slick-slide {
+  outline: none !important;
+  background-color: #fafafa;
+}
+#sectionFive .slick-slide:hover {
+  cursor: pointer;
+}
+#sectionFive .slick-slide.slick-center {
+  transform: scale(1.1);
+  opacity: 1;
+  background-color: #fff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  color: #8c8c8c;
+  font-size: 50px;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.slick-prev {
+  left: -50px !important;
+}
+
+/*-- end sectionFive --*/
+/*-- start sectionSix --*/
+#sectionSix {
+  padding: 100px 0;
+  background-color: #fafafa;
+}
+#sectionSix form {
+  position: relative;
+}
+#sectionSix form input {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 25px;
+  width: 450px;
+  height: 45px;
+  border-radius: 25px;
+  font-size: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
+}
+#sectionSix form button {
+  position: absolute;
+  background-color: #8c8c8c;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  top: 2px;
+  right: 335px;
+}
+#sectionSix form button i {
+  line-height: 15px;
+  text-align: center;
+}
+#sectionSix form button:hover {
+  background: rgba(140, 140, 140, 0.7);
+}
+
+/*-- end sectionSix --*/
+/*-- start sectionSeven --*/
+#sectionSeven {
+  margin: 100px 0;
+}
+#sectionSeven ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+#sectionSeven ul:nth-of-type(1) li {
+  margin: 0 15px;
+}
+#sectionSeven ul:nth-of-type(1) li a {
+  text-decoration: none;
+  color: #8c8c8c;
+}
+#sectionSeven ul:nth-of-type(2) li {
+  margin: 10px 20px;
+}
+#sectionSeven ul:nth-of-type(2) li a i {
+  font-size: 25px;
+  color: #8c8c8c;
+}
+
+/*-- end sectionSeven --*/
+/*-- start footer --*/
+footer {
+  padding: 50px 0;
+  background-color: #fafafa;
+}
+
+/*-- end footer --*/
+
+/*# sourceMappingURL=style.css.map */
